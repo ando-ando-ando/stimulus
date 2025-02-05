@@ -11,6 +11,10 @@ export default class extends Controller {
         this.index++
     }
 
+    previous(){
+        this.index--
+    }
+
     showCurrentSlide(){
         this.slideTargets.forEach((el,i) => {
             el.classList.toggle("slide--current", this.index === i)
