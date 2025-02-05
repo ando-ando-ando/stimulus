@@ -7,12 +7,22 @@
   </head>
   <body>
   <h1 data-controller="example"></h1>
-  <div data-controller="hello">
-    <input data-target="hello.name" type="text">
-    <button data-action="click->hello#greet">
-      Greet
-    </button>
-    <span data-target="hello.output"></span>
-  </div>
+    <div data-controller="hello">
+      <input data-target="hello.name" type="text">
+      <button data-action="click->hello#greet">
+        Greet
+      </button>
+      <span data-target="hello.output"></span>
+    </div>
+
+    <div data-controller="slideshow" data-slideshow-index="0">
+      <button data-action="slideshow#previous"></button>
+      <button data-action="slideshow#next"></button>
+      <div data-target="slideshow.slide" class="slide">起</div>
+      <div data-target="slideshow.slide" class="slide">承</div>
+      <div data-target="slideshow.slide" class="slide">転</div>
+      <div data-target="slideshow.slide" class="slide">結</div>
+    </div>
+
   </body>
 </html>
